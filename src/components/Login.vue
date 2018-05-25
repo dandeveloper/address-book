@@ -21,7 +21,7 @@
               <button @click="login" class="btn btn-lg btn-primary btn-block">Entrar</button>
             <label class="checkbox pull-left">
               <input type="checkbox" id="rememberme"
-              v-model="form.remoberMe">
+              v-model="form.rememberMe">
               Lembrar-me
             </label>
           </form>
@@ -54,8 +54,6 @@ export default {
   mounted() {
     if (localStorage.getItem('email')) {
       this.form.email = localStorage.getItem('email');
-    } else {
-      localStorage.getItem('email');
     }
   },
 
