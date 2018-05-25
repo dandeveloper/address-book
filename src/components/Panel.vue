@@ -19,13 +19,19 @@
         </div>
       </div>
     </b-navbar>
+    <b-modal ref="myModalRef" hide-footer title="Cadastrar novo endereço">
+      <addressNew></addressNew>
+    </b-modal>
+
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { Navbar } from 'bootstrap-vue/es/components';
-import store from '../vuex/store';
+import bModal from 'bootstrap-vue/es/components/modal/modal';
+import store from '@/vuex/store';
+import AddressNew from './addressService/AddressNew';
 
 Vue.use(Navbar);
 
@@ -45,8 +51,12 @@ export default {
       this.$router.push('/');
     },
     newAddress() {
-
+      this.$refs.myModalRef.show();
     },
+  },
+  components: {
+    addressNew: AddressNew,
+    'b-modal': bModal,
   },
 };
 </script>
