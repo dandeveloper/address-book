@@ -13,9 +13,11 @@
           </p>
           <form class="form-signin">
               <input type="email" id="email" class="form-control"
-              placeholder="meu@email.com" v-model="form.email" required>
+              placeholder="meu@email.com"
+              v-model="form.email" required>
               <input type="password" id="password" class="form-control"
-              placeholder="Digite sua Senha..." v-model="form.password" required>
+              placeholder="Digite sua Senha..."
+              v-model="form.password" required>
               <button @click="login" class="btn btn-lg btn-primary btn-block">Entrar</button>
             <label class="checkbox pull-left">
               <input type="checkbox" id="rememberme"
