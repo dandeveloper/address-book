@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <form class="col-md-12">
+      <form onsubmit="return false" class="col-md-12">
         <div class="form-group">
           <label for="cep">Digite seu CEP</label>
           <input type="text" class="form-control"
@@ -78,14 +78,14 @@ export default {
             this.cepError = true;
           } else {
             this.cepError = false;
-            this.addressResponse(response.body);
+            this.autoFillForm(response.body);
           }
         }
       }, (e) => {
         console.log(e);
       });
     },
-    addressResponse(address) {
+    autoFillForm(address) {
       this.form.logradouro = address.logradouro;
       this.form.bairro = address.bairro;
       this.form.cidade = address.localidade;
@@ -95,11 +95,13 @@ export default {
       if (this.form.cep.length === 9) {
         store.commit('SAVE_ADDRESS', this.form);
         this.clearForm();
+        store.commit('GET_ADDRESSES');
       } else {
         alert('Preencha o CEP corretamente.');
       }
     },
     clearForm() {
+      this.cepError = false;
       this.form = {
         cep: '',
         logradouro: '',
