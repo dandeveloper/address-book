@@ -92,12 +92,15 @@ export default {
       this.form.estado = address.uf;
     },
     saveAddress() {
-      if (this.form.cep.length === 9) {
+      if (this.form.cep.length !== 9) {
+        alert('Preencha o CEP corretamente.');
+      } else if (this.form.logradouro === '' || this.form.complemento === '' ||
+            this.form.bairro === '' || this.form.cidade === '' || this.form.estado === '') {
+          alert('Preencha todos os campos corretamente.');
+      } else {
         store.commit('SAVE_ADDRESS', this.form);
         this.clearForm();
         store.commit('GET_ADDRESSES');
-      } else {
-        alert('Preencha o CEP corretamente.');
       }
     },
     clearForm() {
