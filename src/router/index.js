@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Login from '@/components/Login';
 import Register from '@/components/Register';
 import Panel from '@/components/Panel';
+// import Address from '@/components/addressService/Address';
 
 Vue.use(Router);
 
@@ -23,5 +24,10 @@ export default new Router({
       name: 'Panel',
       component: Panel,
     },
+    // {
+    //   path: '/address',
+    //   name: 'Address',
+    //   component: Address,
+    // },
   ],
 });
