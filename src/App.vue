@@ -10,5 +10,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+  $theme-colors: (
+    "primary": #79589F,
+    "danger": #ff4136,
+    "info": #534A93,
+  );
+  @import '../node_modules/bootstrap/scss/bootstrap.scss';
 </style>
