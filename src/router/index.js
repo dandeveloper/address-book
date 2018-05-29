@@ -8,6 +8,7 @@ import NotFoundComponent from '@/components/NoFoundComponent';
 Vue.use(VueRouter);
 
 export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',

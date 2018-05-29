@@ -11,7 +11,7 @@
               <li v-for="error in errors" :key="error">{{ error }}</li>
             </ul>
           </p>
-          <form class="form-signin">
+          <form class="form-signin" onsubmit="return false">
               <input type="email" id="email" class="form-control"
                 placeholder="Cadastre seu Email"
                 v-model="form.email" required>
