@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-sm-6 col-md-4 col-md-offset-4">
-        <h1 class="text-center login-title">Faça seu Login</h1>
+        <h1 class="text-center login-title p-4">Faça seu Login</h1>
         <div class="account-wall">
           <img id="profile-img" class="profile-img-card"
           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
