@@ -96,7 +96,7 @@ export default {
         alert('Preencha o CEP corretamente.');
       } else if (this.form.logradouro === '' || this.form.complemento === '' ||
             this.form.bairro === '' || this.form.cidade === '' || this.form.estado === '') {
-          alert('Preencha todos os campos corretamente.');
+        alert('Preencha todos os campos corretamente.');
       } else {
         store.commit('SAVE_ADDRESS', this.form);
         this.clearForm();
