@@ -19,6 +19,7 @@
         </div>
       </div>
     </b-navbar>
+    <addressList></addressList>
     <b-modal ref="myModalRef" hide-footer title="Cadastrar novo endereço">
       <addressNew></addressNew>
     </b-modal>
@@ -32,6 +33,7 @@ import { Navbar } from 'bootstrap-vue/es/components';
 import bModal from 'bootstrap-vue/es/components/modal/modal';
 import store from '@/vuex/store';
 import AddressNew from './addressService/AddressNew';
+import AddressList from './addressService/AddressList';
 
 Vue.use(Navbar);
 
@@ -57,6 +59,7 @@ export default {
   components: {
     addressNew: AddressNew,
     'b-modal': bModal,
+    addressList: AddressList,
   },
 };
 </script>
